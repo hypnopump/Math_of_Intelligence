@@ -16,7 +16,7 @@ def get_data(PATH):
 	useless_features = ['color', 'clarity', 'cut', 'table', 'depth', 'y', 'z']
 	for f in useless_features:
 	    del data[f]
-	cleaned = [list(data.loc[random.randint(2500,53000)]) for i in range(2500)]
+	cleaned = [list(data.loc[random.randint(2500,53000)]) for i in range(500)]
 	print(cleaned)
 
 	return [[round(float(c[1]), 2), c[3], c[2]] for c in cleaned]
