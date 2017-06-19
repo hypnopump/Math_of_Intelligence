@@ -16,26 +16,26 @@ def get_data(PATH):
 	useless_features = ['color', 'clarity', 'cut', 'table', 'depth', 'y', 'z']
 	for f in useless_features:
 	    del data[f]
-	cleaned = [list(data.loc[random.randint(2500,53000)]) for i in range(500)]
+	cleaned = [list(data.loc[random.randint(1,53000)]) for i in range(500)]
 	print(cleaned)
 
 	return [[round(float(c[1]), 2), c[3], c[2]] for c in cleaned]
 
 # Plot a graph representation of the data in 3D
 def plot_graph(points,plane):
-    f1 = [p[0] for p in points]
-    f2 = [p[1] for p in points]
-    f3 = [p[2] for p in points]
+    f1 = [p[0] for p in points] # Mass
+    f2 = [p[1] for p in points] # Width
+    f3 = [p[2] for p in points] # Price
     fig = plt.figure()
     fig.suptitle("Correlation between Width, Weight and Diamond's prices")
     ax = fig.gca(projection='3d')
     ax.axis([0, 5, 3,11])
-    ax.set_xlabel('Weight (carats)')
+    ax.set_xlabel('Mass (carats)')
     ax.set_ylabel('Width (mm)')
     ax.set_zlabel('Price ($)')
     ax.plot(f1, f2, f3, 'r.', label='Diamonds') # Plot points
-    # ax.plot(xunits="Weight (carats)", yunits="Cut (1-5, higher is better)", zunits="Price ($)")
     ax.legend()
+
     if plane != False:
         # create x,y points to be part of the hyperplane
         xx, yy = np.meshgrid(np.linspace(0, 5), np.linspace(3.5, 11))
@@ -86,10 +86,9 @@ def gradient_descent_runner(points, starting_w0, starting_w1, starting_w2, learn
 # Just Do It
 def run(points):
     learning_rate = 0.005
-    initial_w0 = 0 # initial z-intercept guess
-    initial_w1 = 0 # initial x-slope guess
-    initial_w2 = 0 # initial y-slope guess
+    initial_w0 = initial_w1 = initial_w2 = 0 # initial weights set to 0
     num_iterations = 2500
+    
     print("Starting gradient descent at w0 = {0}, w1 = {1}, w2 = {2} error = {3}".format(initial_w0, initial_w1, initial_w2, compute_error_for_line_given_points(initial_w0, initial_w1, initial_w2, points)))
     print("Running...")
     [w0, w1, w2] = gradient_descent_runner(points, initial_w0, initial_w1, initial_w2, learning_rate, num_iterations)
