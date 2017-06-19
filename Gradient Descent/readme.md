@@ -3,7 +3,7 @@
 
 The code above is for the challenge of [this](https://www.youtube.com/watch?v=xRJCOz3AfYY&t=9s) video by [Siraj Raval](https://github.com/llSourcell) on YouTube.
 
-### Dataset
+## Dataset
 
 The dataset used for this challenge has been downloaded form [Kaggle](https://www.kaggle.com). You can find it in [this link](https://www.kaggle.com/shivam2503/diamonds).
 
@@ -19,11 +19,13 @@ It's a CSV file with data about **Diamonds** such as:
 * Clarity
 * ...
 
-### Step 1: Data Exploration
+## Step 1: Data Exploration
 
 As we can see in the `pd.read_csv(PATH)` function, the dataset has many samples and features. We can see that some of them are integers, some are floats and some are strings, such as the **cut**: Fair, Good, Very Good, Premium and Ideal.
 
-### Step 2: Data Preparation
+<img src="imgs/dataframe.PNG">
+
+## Step 2: Data Preparation
 
 Since we're going to use a Linear Regression model and it's going to be optimized with a Gradient Descent, we're going to select 2-3 features. We're going to avoid string features since our model will work with numbers and we would have to convert them.
 
@@ -31,7 +33,7 @@ For the purpose of this challenge, we're going to select the price, the width an
 
 Due to the huge amount of data (53000 samples), a randomized set of 500 samples is selected to perform the Linear Regression.
 
-### Step 3: Analysis
+## Step 3: Analysis
 
 We're going to build a Linear Regression Model. A Linear Regression model is a **linear model** with the following structure structure: 
 
@@ -48,7 +50,7 @@ We will repeat this process until:
 2. The updates on the weights are so small that the model doesn't learn anymore.
 
 
-### Step 4: Data Visualization
+## Step 4: Data Visualization
 
 After performing a Linear Regression with a Gradient Descent as optimizer (starting all weights to 0, with a learning rate of 0.005 and 2500 iterations) we get the regression **hyperplane**, which is given by this equation: 
 
@@ -56,12 +58,12 @@ After performing a Linear Regression with a Gradient Descent as optimizer (start
 
 In order to make it easy to understand the so-called regression hyperplane, a data visualization is provided:
 
-<img src="dataviz.PNG">
+<img src="imgs/dataviz.PNG">
 
-### Step 5: Conlusions
+## Step 5: Conlusions
 
 As we can see in the image above, both the mass and the width of the Diamonds contribute to their price. However, as we can see, the mass of the Diamonds is much more important when it comes to their price than their width.
 
 We can appreciate something la a curve in the Graph. The higher the mass, the higher the width, and it makes sense since we're talking about a material with a fixed and unvariable density.
 
-#### Special thanks to Siraj Raval, without who I would have never have introduced myself in this awesome world.
+#### Special thanks to Siraj Raval, without who I would have never introduced myself in this awesome world.
