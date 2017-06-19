@@ -3,9 +3,15 @@
 
 The code above is for the challenge of [this](https://www.youtube.com/watch?v=xRJCOz3AfYY&t=9s) video by [Siraj Raval](https://github.com/llSourcell) on YouTube.
 
+## Dependencies
+
+* Numpy
+* Pandas
+* Matplotlib
+
 ## Dataset
 
-The dataset used for this challenge has been downloaded form [Kaggle](https://www.kaggle.com). You can find it in [this link](https://www.kaggle.com/shivam2503/diamonds).
+The dataset used for this challenge has been downloaded form Kaggle, you can find it [here](https://www.kaggle.com/shivam2503/diamonds).
 
 It's a CSV file with data about **Diamonds** such as:
 
