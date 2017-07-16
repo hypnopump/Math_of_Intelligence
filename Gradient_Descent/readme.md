@@ -12,16 +12,7 @@ The code above is for the challenge of [this](https://www.youtube.com/watch?v=xR
 ### Dataset
 
 The dataset used for this challenge has been downloaded form Kaggle, you can find it [here](https://www.kaggle.com/shivam2503/diamonds).
-It's a CSV file with data about **Diamonds** such as:
-* Weight
-* Color
-* Width
-* Height
-* Depth
-* Quality ot the cut
-* Price
-* Clarity
-* ...
+It's a CSV file with data about **Diamonds** such as: weight, color, width, height, depth, quality of the cut, price, clarity...
 
 ## Step 1: Data Exploration
 
