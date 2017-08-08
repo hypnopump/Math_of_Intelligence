@@ -2,8 +2,6 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 from scipy.misc import toimage
-# from pillow import Image
-
 
 class SOM:
     def __init__(self, x_size, y_size, trait_num, t_iter, t_step):
