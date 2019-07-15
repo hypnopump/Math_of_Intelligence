@@ -1,5 +1,5 @@
 # Gradient Descent
-### Implementation of the Gradien Descent Optimizer for a 3-D Liner Regression problem.
+### Implementation of the Gradien Descent Optimizer for a 3-D Linear Regression problem.
 
 The code above is for the challenge of [this](https://www.youtube.com/watch?v=xRJCOz3AfYY&t=9s) video by [Siraj Raval](https://github.com/llSourcell) on YouTube.
 
